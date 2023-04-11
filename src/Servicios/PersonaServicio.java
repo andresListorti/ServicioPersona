@@ -20,7 +20,7 @@ public class PersonaServicio {
     public Persona crearPersona() {
         String nombre;
         int edad;
-        String sexo = "";
+        char sexo;
         String respuestaSexo;
         double peso;
         double altura;
@@ -33,13 +33,13 @@ public class PersonaServicio {
         do {
 
             System.out.println("Ingrese Sexo. Solo 'H' para Hombre, 'M' para Mujer u 'O' para Otro: ");
-            respuestaSexo = leer.next();
-            respuestaSexo.toUpperCase();
-            if (respuestaSexo.equals("H") || respuestaSexo.equals("M") || respuestaSexo.equals("O")) {
-                sexo = respuestaSexo;
+            sexo = leer.next().charAt(0);
+
+            if (sexo == 'H' || sexo == 'M' || sexo == 'O') {
                 condition = false;
             } else {
                 System.out.println("Error solo H, M u O================================");
+                continue;
             }
         } while (condition);
         System.out.println("Ingrese Peso en Kilos: ");
