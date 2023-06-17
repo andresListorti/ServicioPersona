@@ -7,8 +7,10 @@ public class Persona {
     private double peso;
     private double altura;
 
+
     public Persona() {
     }
+
 
     public Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
